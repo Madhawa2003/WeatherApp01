@@ -1,0 +1,51 @@
+
+
+
+
+<div class="cardcont">
+  <div class="cardinnercont">
+  <div class="card" (click)="clickcard(weatherdata)" *ngFor="let weatherdata of weatherData;" >
+    <div class="cardhead" [style.background-color]="weatherdata.customcolor">
+      <div class="closing">
+        <button (click)="closecard(weatherdata.customId); $event.stopPropagation()">
+          X
+        </button>
+      </div>
+      <div class="headflexer">
+        <div class="headleft">
+          <h1>{{ weatherdata.name }},{{ weatherdata.sys.country }}</h1>
+          <p>9.19 , Feb 8</p>
+          <span>{{ weatherdata.weather.description}}</span>
+        </div>
+        <div class="headright">
+          <h1>{{convertKelvinToCelsius( weatherdata.main.feels_like) }}&nbsp;&deg;C</h1>
+          <p>Temp Min: {{convertKelvinToCelsius( weatherdata.main.temp_min) }}&deg;C</p>
+          <p>Temp Max: {{convertKelvinToCelsius( weatherdata.main.temp_max) }}&deg;C</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="cardbody">
+      <div>
+        <p><b>Pressure :</b>  {{ weatherdata.main.pressure }}hPa</p>
+        <p><b>Humidity :</b>  {{ weatherdata.main.humidity }}%</p>
+        <p><b>Visibility :</b>  {{converttoKm( weatherdata.visibility) }}km</p>
+      </div>
+      <span class="vertical-line" style="opacity:0.4"></span>
+      <div style="text-align: center">
+        <p><img src="/assets/image-removebg-preview%20(1).png" style="height:2em; : white"></p>
+        <p>{{ weatherdata.wind.speed }}m/s  {{ weatherdata.wind.deg}} Degree</p>
+      </div>
+      <span class="vertical-line" style="opacity:0.4"></span>
+      <div>
+        <p><b>Sunrise:</b> {{convertTime( weatherdata.sys.sunrise) }}</p>
+        <p><b>Sunset:</b> {{convertTime( weatherdata.sys.sunset) }}</p>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  </div>
+</div>

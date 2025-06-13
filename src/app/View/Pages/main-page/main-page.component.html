@@ -1,0 +1,32 @@
+<div id="bgcont">
+  <button (click)="logout()" style="color: white ; text-align: right ;  right: 1em; top: 1em;   position: absolute; background-color: inherit" ><mat-icon>logout</mat-icon></button>
+
+  <img class="bgimage" src="assets/clouds.png" alt="Background" />
+  <div class="containers"></div>
+
+  <div id="maincont">
+    <!-- Logo Section -->
+    <div class="centerd">
+      <div class="logo">
+        <img src="assets/cloudlogo.png" alt="Weather Icon" class="logoimg" />
+        <h1>Weather App</h1>
+      </div>
+      <div class="serch">
+        <input type="text" placeholder="Type a City">
+        <button>Add City</button>
+      </div>
+    </div>
+
+<!--    card container-->
+    <div class="cardcontainer">
+      <app-weather-card/>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="footer">
+  <h2>2021 Fidenz Technologies</h2>
+</div>
