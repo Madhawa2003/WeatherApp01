@@ -161,7 +161,7 @@
 
 .imagewithdisc{
   display: grid;
-  grid-template-columns: repeat(2, 1fr)!important;
+  grid-template-columns: repeat(2, 0fr)!important;
   justify-content: center; /* Horizontal center */
   align-items: center;
 }
