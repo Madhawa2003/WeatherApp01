@@ -14,8 +14,13 @@
       <div class="headflexer">
         <div class="headleft">
           <h1>{{ weatherdata.name }},{{ weatherdata.sys.country }}</h1>
-          <p>9.19 , Feb 8</p>
-          <span>{{ weatherdata.weather.description}}</span>
+          <p>{{getdateandtime( weatherdata.dt) }}</p>
+          <div class="imagewithdisc">
+            <img [src]="'https://openweathermap.org/img/wn/' + weatherdata.weather[0].icon + '@2x.png'" alt="Weather Icon">
+            <span> {{ weatherdata.weather[0].description}}</span>
+          </div>
+
+
         </div>
         <div class="headright">
           <h1>{{convertKelvinToCelsius( weatherdata.main.feels_like) }}&nbsp;&deg;C</h1>

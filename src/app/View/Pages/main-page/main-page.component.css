@@ -18,7 +18,7 @@
   top: 8em;
   height: auto;
   position: relative;
-  width: 100%;
+  width: 100% !important;
   margin-left: 0;
   margin-right: 0;
   white-space: nowrap;
@@ -91,9 +91,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: inherit;
   }
+  .logoimg {
+    height: 2em;
+    width: 2em;
+  }
+
+  .logo {
+    width: 123m;
+    font-size: 10px;
+  }
+
 
   #bgcont {
     height:95vh;
@@ -101,7 +111,7 @@
   }
 
   .serch button{
-    width: 20vw;
+    width: 30vw;
     margin-top: 0em;
   }
 
@@ -113,7 +123,8 @@
     top: 0em;
     height: 75%;
     margin-top: 0em;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x:scroll ;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85% , rgba(0,0,0,0));
   }
   .centerd{

@@ -40,7 +40,12 @@ export class WeatherCardComponent implements OnInit{
     return Math.round(kelvin - 273.15);
 
   }
-
+  getdateandtime(data: number): string {
+    const date = new Date(data * 1000);
+    let time = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true  });
+    let day = date.toLocaleDateString([], { day: 'numeric', month: 'long' });
+    return time +" , "+day;
+  }
   clickcard(weatherData:any){
     console.log("hi" + weatherData);
     this.clickedData = weatherData;
