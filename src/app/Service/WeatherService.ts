@@ -43,6 +43,8 @@ export class WeatherService {
             localStorage.setItem('weather', JSON.stringify(weatherArray));
             this.weatherData = weatherArray; // Optional: update the service array
             console.log('All weather data loaded and saved.');
+            window.location.reload();
+
           }
         });
       });

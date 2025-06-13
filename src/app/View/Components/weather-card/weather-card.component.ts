@@ -18,7 +18,12 @@ export class WeatherCardComponent implements OnInit{
 
 
 
-  constructor(private http: HttpClient, private weatherService: WeatherService , private wds:SharedService, private router: Router) {}
+  constructor(private http: HttpClient, private weatherService: WeatherService , private wds:SharedService, private router: Router) {
+    if(localStorage.length===0){
+      weatherService.getdata();
+
+    }
+  }
 
   ngOnInit(): void {
     if (localStorage.length === 0) {
