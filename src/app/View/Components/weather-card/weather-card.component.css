@@ -36,8 +36,8 @@
     grid-template-columns: repeat(2, 1fr)!important;
     gap: 1em;
     border-radius: 0em 0em 1em 1em;
-    padding-left: 0em!important;
-    padding-right: 0em!important;
+    padding-left: 1em!important;
+    padding-right: 1em!important;
     padding-top: 2em;
     padding-bottom: 2em;
   }

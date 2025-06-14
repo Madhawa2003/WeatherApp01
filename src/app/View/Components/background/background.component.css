@@ -1,0 +1,24 @@
+.black {
+  background-color: #1E2027;
+  min-height: 100vh;
+  height: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgimage {
+  width: 100%;
+  height: auto;
+  background-color: #203b81;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

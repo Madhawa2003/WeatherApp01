@@ -1,21 +1,29 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  overflow: scroll;
+}
+
+app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 
 #bgcont {
   position: relative;
   width: 100%;
-  /*min-height: 50vh;*/
-  background-color: rgb(31, 33, 40);
+  height: initial;
+  min-height: 90vh;
+
 }
 
-.bgimage {
-  background-color: #203b81!important;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 50vh;
-}
 .cardcontainer{
-  top: 8em;
   height: auto;
   position: relative;
   width: 100% !important;
@@ -30,7 +38,6 @@
 
 .containers {
   position: relative;
-  top: -2em;
   height:inherit;
   width: 100%;
   /*background-color: rgb(31, 33, 40);*/
@@ -38,7 +45,6 @@
 
 #maincont {
   position: relative;
-  top: -40vh;
   left: 0;
   width: 100%;
   height: inherit;
@@ -147,11 +153,12 @@
   color: #727171;
   text-align: center;
   position: relative;
+  bottom: 0;
   font-size: 10px;
+
 }
 
 .footer h2{
-  top: 1em;
+  top: 3vh;
   position: relative;
 }
-

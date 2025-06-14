@@ -28,7 +28,6 @@ export class WeatherService {
 
       cities.List.forEach((city: any) => {
         const CityName = city.CityName;
-
         console.log(CityName);
 
         this.getWeatherByCityId(CityName).subscribe((weather: any) => {
@@ -41,7 +40,6 @@ export class WeatherService {
 
           if (completed === total) {
             localStorage.setItem('weather', JSON.stringify(weatherArray));
-            this.weatherData = weatherArray; // Optional: update the service array
             console.log('All weather data loaded and saved.');
             window.location.reload();
 

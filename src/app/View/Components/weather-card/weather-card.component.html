@@ -14,7 +14,7 @@
       <div class="headflexer">
         <div class="headleft">
           <h1>{{ weatherdata.name }},{{ weatherdata.sys.country }}</h1>
-          <p>{{getdateandtime( weatherdata.dt) }}</p>
+          <p>{{getdateandtime(weatherdata.dt) }}</p>
           <div class="imagewithdisc">
             <img [src]="'https://openweathermap.org/img/wn/' + weatherdata.weather[0].icon + '@2x.png'" alt="Weather Icon">
             <span> {{ weatherdata.weather[0].description}}</span>

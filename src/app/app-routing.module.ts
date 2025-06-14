@@ -4,12 +4,14 @@ import {MainPageComponent} from './View/Pages/main-page/main-page.component';
 import {WeatherCardComponent} from './View/Components/weather-card/weather-card.component';
 import {DetailPopupComponent} from './View/Components/detail-popup/detail-popup.component';
 import {AuthGuard} from '@auth0/auth0-angular';
+import {BackgroundComponent} from './View/Components/background/background.component';
 
 const routes: Routes = [
   { path: 'main', component: MainPageComponent, canActivate: [AuthGuard]},
   {path: "", redirectTo: 'main', pathMatch: 'full'},
   {path: "card", component: WeatherCardComponent},
   {path: "detail", component: DetailPopupComponent  },
+  {path: "back", component: BackgroundComponent  },
 ];
 
 @NgModule({

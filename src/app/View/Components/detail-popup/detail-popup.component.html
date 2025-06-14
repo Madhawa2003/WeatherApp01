@@ -1,7 +1,6 @@
-<div id="bgcont">
-  <img class="bgimage" src="assets/clouds.png" alt="Background" />
+<div class="container">
+<app-background></app-background>
   <div id="maincont">
-
     <!-- Logo Section -->
     <div class="centerd">
       <div class="logo">
@@ -10,11 +9,7 @@
       </div>
     </div>
 
-
-<div class="cardmain">
-
-
-
+    <div class="cardmain">
          <div class="card"  *ngFor="let weatherdata of weatherData;" >
            <div class="cardhead" [style.background-color]="weatherdata.custom">
              <div class="closing">
@@ -60,15 +55,13 @@
              </div>
            </div>
          </div>
+
        </div>
-     </div>
+
+  </div>
 
 
 </div>
-
-
-
-
 <div class="footer">
   <h2>2021 Fidenz Technologies</h2>
 </div>

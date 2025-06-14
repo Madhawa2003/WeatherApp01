@@ -12,6 +12,7 @@ import {MatButton} from '@angular/material/button';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 import {AuthModule} from '@auth0/auth0-angular';
+import { BackgroundComponent } from './View/Components/background/background.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {AuthModule} from '@auth0/auth0-angular';
     MainPageComponent,
     WeatherCardComponent,
     DetailPopupComponent,
+    BackgroundComponent,
   ],
   imports: [
     BrowserModule,

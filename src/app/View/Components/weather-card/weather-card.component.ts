@@ -13,6 +13,7 @@ import {Router} from '@angular/router';
 })
 export class WeatherCardComponent implements OnInit{
   weatherData: any[] = [];
+  individualData: any[] = [];
   Data: any[] = [];
   public clickedData: any[] = [];
 
@@ -21,22 +22,27 @@ export class WeatherCardComponent implements OnInit{
   constructor(private http: HttpClient, private weatherService: WeatherService , private wds:SharedService, private router: Router) {
     if(localStorage.length===0){
       weatherService.getdata();
+      console.log('data freching with constructor')
 
     }
   }
 
   ngOnInit(): void {
-    if (localStorage.length === 0) {
+    // if (localStorage.length === 0) {
+    //   console.log('localStorage is completely empty');
+    //   this.weatherService.getdata();
+    // }
+
+    const stored = localStorage.getItem('weather');
+    if (stored) {
+      this.weatherData = JSON.parse(stored);
+
+    }else {
       console.log('localStorage is completely empty');
       this.weatherService.getdata();
     }
 
 
-    const stored = localStorage.getItem('weather');
-    if (stored) {
-      this.weatherData = JSON.parse(stored);
-      console.log(this.weatherData);
-    }
 
 
 
@@ -46,11 +52,14 @@ export class WeatherCardComponent implements OnInit{
 
   }
   getdateandtime(data: number): string {
-    const date = new Date(data * 1000);
+    let date = new Date(data * 1000);
     let time = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true  });
     let day = date.toLocaleDateString([], { day: 'numeric', month: 'long' });
     return time +" , "+day;
   }
+
+
+
   clickcard(weatherData:any){
     console.log("hi" + weatherData);
     this.clickedData = weatherData;
