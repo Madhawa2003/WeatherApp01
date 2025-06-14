@@ -51,7 +51,7 @@ export class WeatherService {
 
   private autoClearStorage(): void {
     setInterval(() => {
-      localStorage.clear();
+      localStorage.removeItem('weather');
       console.log("All are cleared");
       this.getdata();
     }, 5 * 60 * 1000); // 5 minutes in milliseconds
