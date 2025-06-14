@@ -11,6 +11,9 @@ export class MainPageComponent {
   constructor(public auth: AuthService) {}
 
   ngOnInit(): void {
+    this.auth.user$.subscribe(token => {
+      console.log('ID Token:', token);
+    });
 
 
   }

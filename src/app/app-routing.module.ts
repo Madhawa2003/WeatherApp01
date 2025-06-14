@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'main', component: MainPageComponent, canActivate: [AuthGuard]},
   {path: "", redirectTo: 'main', pathMatch: 'full'},
   {path: "card", component: WeatherCardComponent},
-  {path: "detail", component: DetailPopupComponent  },
+  {path: "detail", component: DetailPopupComponent },
   {path: "back", component: BackgroundComponent  },
 ];
 

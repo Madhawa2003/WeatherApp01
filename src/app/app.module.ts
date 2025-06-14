@@ -37,9 +37,11 @@ import { BackgroundComponent } from './View/Components/background/background.com
       domain:"dev-2dpbnlmps4ws3vol.us.auth0.com",
       clientId:"RNvdAf9wGX9wuyBv0khYvIlm8oeo30os",
       authorizationParams:{
-        redirect_uri:window.location.origin
-      }
-    })
+        redirect_uri:window.location.origin,
+
+      },
+      useRefreshTokens: true
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -66,6 +66,12 @@ app-background {
   height: 3em;
   width: 3em;
 }
+.logout{
+  z-index: 2;
+}
+.logout:hover{
+  color: green;
+}
 
 .centerd{
   text-align: center;
