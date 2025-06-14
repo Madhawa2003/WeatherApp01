@@ -39,14 +39,17 @@ export class WeatherService {
           completed++;
 
           if (completed === total) {
+
             localStorage.setItem('weather', JSON.stringify(weatherArray));
             console.log('All weather data loaded and saved.');
             window.location.reload();
+
 
           }
         });
       });
     });
+
   }
 
   private autoClearStorage(): void {
